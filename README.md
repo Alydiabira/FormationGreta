@@ -9,3 +9,5 @@ https://php.watch/articles/php-8.3-install-upgrade-on-macos-homebrew
 3° symfony server:start -d
 
 4° cd my_project_directory
+
+5° code .
