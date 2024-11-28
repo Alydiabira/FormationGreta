@@ -7,4 +7,4 @@ git branch
 git fetch
 git add .
 git commit
-git push
+git push.
