@@ -1,0 +1,10 @@
+<?php
+echo "Hello Word!";
+?>
+
+git status
+git branch
+git fetch
+git add .
+git commit
+git push
