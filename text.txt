@@ -15,3 +15,27 @@ git push --set-upstream origin dev/Aly
 git checkout -b dev/Aly  
 git clone git@gitlab.com:gretaformationsymfony/symfony.git
 cd ..   
+
+Exercice 2 : 
+
+Créez un tableau associatif nommé $produits qui contient une liste de produits. Chaque produit est représenté par un tableau associatif contenant :
+
+nom (nom du produit),
+prix (prix en euros),
+en_stock (booléen : true si le produit est en stock, sinon false)
+
+Parcourez le tableau $produits avec une boucle (foreach) et effectuez les actions suivantes :
+
+Affichez le nom et le prix de chaque produit.
+Si le produit est en stock, ajoutez un message : "Disponible".
+Si le produit n'est pas en stock, ajoutez un message : "Rupture de stock".
+Si le prix du produit est supérieur à 2 euros, affichez une remarque : "Produit Premium".
+Exercice 3 - Merge Request / Code Review / Commentaires de code : 
+
+Une fois les précédents exercices finis : 
+commit et push votre branches avec l'ensemble de vos travaux
+créer une merge request sur gitlab, elle devra partir de votre branche pour aller dans la branche main
+demander la review de votre MR par un collègue
+Faire des retours dans la MR (en commençant par indiquer à quel endroit du code le collègue devrait ajouter des commentaires qui expliqueront ses fonctions, ses algorithmes)
+Les commentaires devront être écris en anglais
+Une fois que la MR est validée par le collègue, me prévenir pour la démarche suivantea
