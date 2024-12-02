@@ -38,4 +38,4 @@ créer une merge request sur gitlab, elle devra partir de votre branche pour all
 demander la review de votre MR par un collègue
 Faire des retours dans la MR (en commençant par indiquer à quel endroit du code le collègue devrait ajouter des commentaires qui expliqueront ses fonctions, ses algorithmes)
 Les commentaires devront être écris en anglais
-Une fois que la MR est validée par le collègue, me prévenir pour la démarche suivantea
+Une fois que la MR est validée par le collègue, me prévenir pour la démarche suivante.
