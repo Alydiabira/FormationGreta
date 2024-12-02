@@ -11,3 +11,8 @@ git push
 git log
 
 https://git-scm.com/docs
+
+git push --set-upstream origin dev/Aly
+git checkout -b dev/Aly  
+git clone git@gitlab.com:gretaformationsymfony/symfony.git
+cd ..   
