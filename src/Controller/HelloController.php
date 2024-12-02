@@ -10,6 +10,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HelloController extends AbstractController
 {
+
+    /** Returns the sun of the given 2 numbers
+     * @parm int $numbers
+     * 
+     */
     #[Route('/hello', name: 'app_hello')]
     public function hello(): Response
     {
@@ -53,6 +58,56 @@ class HelloController extends AbstractController
     #[Route('/produits', name: 'app_produits')]
     public function produits(): Response
     {
+
+       // Explications :
+        // Définition du tableau $produits :
+        // Chaque produit est représenté comme un tableau associatif contenant nom, prix, et en_stock.
+        // Utilisation de foreach :
+        // La boucle foreach parcourt chaque produit dans $produits.
+        // Conditions :
+        // Le stock est vérifié avec une condition if ($produit["en_stock"]).
+        // Le prix est comparé avec if ($produit["prix"] > 2) pour ajouter la remarque "Produit Premium".
+        // Affichage :
+        // Les informations sont affichées avec echo.
+
+        $produits = [
+            [
+                "nom" => "Pomme",
+                "prix" => 1.5,
+                "en_stock" => true
+            ],
+            [
+                "nom" => "Banane",
+                "prix" => 2.5,
+                "en_stock" => false
+            ],
+            [
+                "nom" => "Cerise",
+                "prix" => 3.0,
+                "en_stock" => true
+            ]
+        ]; 
+        
+        // Parcours du tableau $produits
+        foreach ($produits as $produit) {
+            // Affichage du nom et du prix
+            echo "Produit : " . $produit["nom"] . ", Prix : " . $produit["prix"] . " €\n";
+            
+            // Vérification du stock
+            if ($produit["en_stock"]) {
+                echo "Message : Disponible\n";
+            } else {
+                echo "Message : Rupture de stock\n";
+            }
+            
+            // Vérification du prix
+            if ($produit["prix"] > 2) {
+                echo "Remarque : Produit Premium\n";
+            }
+            
+            echo "\n"; // Ligne vide pour séparer les produits
+        }
+    
         return $this->render('hello/produits.html.twig', 
         [
             'controller_name' => 'ProduitsController',
