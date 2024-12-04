@@ -1,20 +1,111 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="/path/to/your/css">
+    {% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        {# <nav>
+            <ul>
+                <li><a href="/hello">Hello</a></li>
+                <li><a href="/tableaux">Tableaux</a></li>
+                <li><a href="/produits">Produits</a></li>
+                <li><a href="/modulo">Modulo</a></li>
+                <li><a href="/multiplication">Multiplication</a></li>
+                <li><a href="/soustraction">Soustraction</a></li>
+                <li><a href="/addition">Addition</a></li>
+                <li><a href="/division">Division</a></li>
+            </ul>
+        </nav> #}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}
 
-        
-        {% endblock %}
-    </body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Acceuil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('hello') }}">hello</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('tableaux') }}">tableaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('produits') }}">produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('modulo') }}">modulo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('multiplication') }}">multiplication</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('soustraction') }}">soustraction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('addition') }}">addition</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('division') }}">division</a>
+                </li>
+                {# {% if user %} #}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ ('') }}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ ('app_logout') }}">Logout</a>
+                    </li>
+                {# {% else %} #}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ ('app_login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ ('app_register') }}">Register</a>
+                    </li>
+                {# {% endif %} #}
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+    <!-- Main Content -->
+    <main>
+    
+        <div class="card text-center">
+    <div class="card-header">
+        Exercice
+    </div>
+    <div class="card-body">
+    </div>
+    <div class="card-footer text-muted">
+        {% block body %}        {% endblock %}
+
+    </div>
+</div>
+    </main>
+
+    <!-- Footer -->
+<!-- Footer -->
+    <footer class="bg-light text-center mt-4 py-3">
+        <p>© 2024 Your Brand. All rights reserved.</p>
+    </footer>
+
+    {% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>        <script src="/path/to/your/js"></script>
+    {% endblock %}
+</body>
 </html>
