@@ -104,9 +104,16 @@ public function produits(): Response
     #[Route('/modulo', name: 'app_modulo')]
     public function modulo(Calcul $modulo): Response
     {
+        $a = 10;
+        $b = 20;
+        $result = $a % $b;
+
         return $this->render('hello/modulo.html.twig', 
         [
-            'resulta' => $modulo->add(1, 2),
+            'a' => $a,
+            'b' => $b,
+            'result' => $result,
+            'resulta' => $modulo->add(10, 20),
             'controller_name' => 'ModuloController',
         ]);
     }
