@@ -36,6 +36,9 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $code_postal = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $phone_number = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,6 +124,18 @@ class User
     public function setCodePostal(string $code_postal): static
     {
         $this->code_postal = $code_postal;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?int
+    {
+        return $this->phone_number;
+    }
+
+    public function setPhoneNumber(?int $phone_number): static
+    {
+        $this->phone_number = $phone_number;
 
         return $this;
     }
