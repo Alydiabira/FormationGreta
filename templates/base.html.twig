@@ -64,7 +64,7 @@
                 </li>
                 {# {% if user %} #}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ ('') }}">Profile</a>
+                        <a class="nav-link" href="{{ ('admin') }}">admin</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ ('app_logout') }}">Logout</a>
@@ -95,7 +95,18 @@
     <div class="card-body">
     </div>
     <div class="card-footer text-muted">
-        {% block body %}        {% endblock %}
+{% block body %}
+<h1>Create New User</h1>
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class="btn btn-primary">Submit</button>
+{{ form_end(form) }}
+{% for message in app.flashes('success') %}
+<div class="alert alert-success">
+{{ message }}
+</div>
+{% endfor %}
+{% endblock %}
 
     </div>
 </div>
