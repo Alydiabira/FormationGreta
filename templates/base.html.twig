@@ -38,10 +38,10 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ ('multiplication') }}">multiplication</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ ('soustraction') }}">soustraction</a>
                 </li>#}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ ('article') }}">article</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ ('reset-password') }}">reset-password</a>
                 </li>
@@ -93,14 +93,14 @@
 
 {{ form_start(form) }}
 {{ form_widget(form) }}
+<br/>
+<br/>
 <button class="btn btn-primary">ok</button>
 {{ form_end(form) }}
 {% for message in app.flashes('success') %}
 <div class="alert alert-success">
 {{ message }}
 </div>
-
- 
         
 {% endfor %}
 {% endblock %}
