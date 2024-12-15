@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Article{% endblock %}
+
+{% block body %}
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <h1>Create new Article</h1>
+
+    {{ include('article/_form.html.twig') }}
+  </div>
+  <div class="card-footer text-body-secondary">
+    <a href="{{ path('app_article_index') }}">back to list</a>
+  </div>
+</div>
+    
+
+{% endblock %}
