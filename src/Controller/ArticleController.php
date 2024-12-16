@@ -15,7 +15,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route('/article')]
 final class ArticleController extends AbstractController
 {
-    #[IsGranted('IS_AUTHENTICATED')]
+    // #[IsGranted('IS_AUTHENTICATED')]
     #[Route(name: 'app_article_index', methods: ['GET'])]
     public function index(ArticleRepository $articleRepository): Response
     {
@@ -23,10 +23,14 @@ final class ArticleController extends AbstractController
             'articles' => $articleRepository->findAll(),
         ]);
     }
-
+    #[IsGranted('IS_AUTHENTICATED')]
     #[Route('/new', name: 'app_article_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        // if ($article) {
+        //     $this->denyAccessUnlessGranted('IS_AUTHENTICATED', $article );
+        // }
+
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
@@ -52,6 +56,7 @@ final class ArticleController extends AbstractController
         ]);
     }
 
+    #[IsGranted('IS_AUTHENTICATED')]
     #[Route('/{id}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
@@ -70,6 +75,7 @@ final class ArticleController extends AbstractController
         ]);
     }
 
+    #[IsGranted('IS_AUTHENTICATED')]
     #[Route('/{id}', name: 'app_article_delete', methods: ['POST'])]
     public function delete(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
