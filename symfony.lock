@@ -147,6 +147,33 @@
             "config/packages/mailer.yaml"
         ]
     },
+    "symfony/mailer-send-mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.3",
+            "ref": "a8120b79052d6ced86bae5025fd7b9e203fdccf8"
+        }
+    },
+    "symfony/mailomat-mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "7.2",
+            "ref": "cae79df0a76790e0d6988d41ae0c4520fa0f8ece"
+        }
+    },
+    "symfony/mailtrap-mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "7.2",
+            "ref": "e1d25e0fab8778b977233aff6762d3791eab3155"
+        }
+    },
     "symfony/maker-bundle": {
         "version": "1.61",
         "recipe": {
@@ -232,6 +259,15 @@
             "config/packages/security.yaml",
             "config/routes/security.yaml"
         ]
+    },
+    "symfony/sendgrid-mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.4",
+            "ref": "224aedffb66812dc2b0965dabc14d5f800941da6"
+        }
     },
     "symfony/stimulus-bundle": {
         "version": "2.22",
