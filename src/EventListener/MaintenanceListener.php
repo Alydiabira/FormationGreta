@@ -10,9 +10,12 @@ use Twig\Environment;
 
 final class MaintenanceListener
 {
+   
     public const IS_MAINTENANCE = false; 
+     // desactiver
+    
     // public const IS_MAINTENANCE = true; 
-
+// active
 
     public function __construct(private readonly Environment $twig)
     {
