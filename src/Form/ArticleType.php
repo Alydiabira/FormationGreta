@@ -14,6 +14,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('name')
         ;
+        
     }
 
     public function configureOptions(OptionsResolver $resolver): void
